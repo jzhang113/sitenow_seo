@@ -5,7 +5,7 @@
 function sitenow_seo_apps_app_info() {
   return array(
     'configure form' => 'sitenow_seo_apps_app_configure_form',
-    'demo content module' => '',
+    //'demo content module' => '',
   );
 }
 
@@ -26,7 +26,7 @@ function sitenow_seo_apps_app_configure_form($form, &$form_state) {
   );
 
   $form['sitenow_seo_config_group']['sitenow_google_analytics'] = array(
-    '#markup' => '<a href="' . $base_url . 'admin/config/system/googleanalytics">Configure Google Analytics</a>',
+    '#markup' => '<a href="' . $base_url . '/admin/config/system/googleanalytics">Configure Google Analytics</a>',
   );
 
   return $form;

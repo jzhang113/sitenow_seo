@@ -3,3 +3,27 @@
  * @file
  * Drupal needs this blank file.
  */
+
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+
+function sitenow_seo_form_googleanalytics_admin_settings_form_alter(&$form, &$form_state, $form_id) {
+  // remove unwanted options for non admins
+  if (!user_access('administer modules')) {
+    $form['advanced']['googleanalytics_cache']['#default_value'] = 1;
+    $form['tracking_title']['#access'] = FALSE;
+    $form['tracking']['domain_tracking']['#access'] = FALSE;
+    $form['tracking']['page_vis_settings']['#access'] = FALSE;
+    $form['tracking']['role_vis_settings']['#access'] = FALSE;
+    $form['tracking']['user_vis_settings']['#access'] = FALSE;
+    $form['tracking']['user_vis_settings']['#access'] = FALSE;
+    $form['tracking']['linktracking']['#access'] = FALSE;
+    $form['tracking']['messagetracking']['#access'] = FALSE;
+    $form['tracking']['search_and_advertising']['#access'] = FALSE;
+    $form['tracking']['privacy']['#access'] = FALSE;
+    $form['googleanalytics_custom_var']['#access'] = FALSE;
+    $form['advanced']['#access'] = FALSE;
+  }
+}
