@@ -1,0 +1,12 @@
+name = SiteNow SEO
+description = Search engine optimization for SiteNow
+core = 7.x
+package = SiteNow
+version = 7.x-1.0
+project = sitenow_seo
+dependencies[] = features
+dependencies[] = googleanalytics
+features[features_api][] = api:1
+features[user_permission][] = administer google analytics
+features[user_permission][] = opt-in or out of tracking
+features[user_permission][] = use PHP for tracking visibility
