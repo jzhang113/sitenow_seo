@@ -8,6 +8,7 @@ project = sitenow_seo
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = googleanalytics
+dependencies[] = site_verify
 dependencies[] = strongarm
 dependencies[] = xmlsitemap
 dependencies[] = xmlsitemap_engines
