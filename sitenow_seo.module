@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the SiteNow SEO feature.
  */
+
+include_once 'sitenow_seo.features.inc';
 
 
 /**

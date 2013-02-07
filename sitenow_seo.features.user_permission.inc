@@ -38,5 +38,14 @@ function sitenow_seo_user_default_permissions() {
     'module' => 'googleanalytics',
   );
 
+   // Exported permission: administer xmlsitemap.
+  $permissions['administer xmlsitemap'] = array(
+    'name' => 'administer xmlsitemap',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'xmlsitemap',
+  );
+
   return $permissions;
 }
