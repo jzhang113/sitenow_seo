@@ -10,9 +10,11 @@
  */
 
 function sitenow_seo_form_googleanalytics_admin_settings_form_alter(&$form, &$form_state, $form_id) {
+
+  // turn on caching of tracking code
+  $form['advanced']['googleanalytics_cache']['#default_value'] = 1;
   // remove unwanted options for non admins
   if (!user_access('administer modules')) {
-    $form['advanced']['googleanalytics_cache']['#default_value'] = 1;
     $form['tracking_title']['#access'] = FALSE;
     $form['tracking']['domain_tracking']['#access'] = FALSE;
     $form['tracking']['page_vis_settings']['#access'] = FALSE;
