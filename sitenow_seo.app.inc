@@ -4,13 +4,13 @@
  */
 function sitenow_seo_apps_app_info() {
   return array(
-    'configure form' => 'sitenow_articles_apps_app_configure_form',
+    'configure form' => 'sitenow_seo_apps_app_configure_form',
     'demo content module' => '',
   );
 }
 
 /**
-* Config form for SiteNow People App
+* Config form for SiteNow SEO App
 */
 function sitenow_seo_apps_app_configure_form($form, &$form_state) {
 
