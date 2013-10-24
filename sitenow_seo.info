@@ -10,6 +10,7 @@ apps[description] = Enables tools to help improve search engine optimization.
 apps[server] = local
 apps[local] = 1
 apps[logo] = seo.png
+apps[screenshots][] = screenshot.jpg
 dependencies[] = ctools
 dependencies[] = features
 dependencies[] = googleanalytics
