@@ -30,14 +30,14 @@ function sitenow_seo_apps_app_configure_form($form, &$form_state) {
     '#markup' => '<div class="admin-panel"><ul class="admin-list"><li class="leaf"><a href="' . $base_url . '/admin/config/system/googleanalytics">Configure Google Analytics</a></li>',
   );
 
-  // Configuration Link to XML Sitemap
-  /*$form['sitenow_seo_config_group']['sitenow_xml_sitemaps'] = array(
-    '#markup' => '<li><a href="' . $base_url . '/admin/config/search/xmlsitemap">Configure XML Sitemaps</a></li>',
-  );*/
-
   // Configuration Link to Page Titles
   $form['sitenow_seo_config_group']['sitenow_page_titles'] = array(
-    '#markup' => '<li><a href="' . $base_url . '/admin/config/search/page-title">Configure Page Titles</a></li></ul></div>',
+    '#markup' => '<li><a href="' . $base_url . '/admin/config/search/page-title">Configure Page Titles</a></li>',
+  );
+
+  // Configuration Link to XML Sitemap
+  $form['sitenow_seo_config_group']['sitenow_xml_sitemaps'] = array(
+    '#markup' => '<li><a href="' . $base_url . '/admin/config/search/xmlsitemap">Configure XML Sitemaps</a></li></ul></div>',
   );
 
   return $form;

@@ -35,6 +35,7 @@ function sitenow_seo_user_default_permissions() {
     'name' => 'administer xmlsitemap',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'xmlsitemap',
   );
