@@ -10,7 +10,6 @@ include_once 'sitenow_seo.features.inc';
 /**
  * Implements hook_form_FORM_ID_alter().
  */
-
 function sitenow_seo_form_googleanalytics_admin_settings_form_alter(&$form, &$form_state, $form_id) {
 
   // turn on caching of tracking code
@@ -28,6 +27,18 @@ function sitenow_seo_form_googleanalytics_admin_settings_form_alter(&$form, &$fo
     $form['tracking']['search_and_advertising']['#access'] = FALSE;
     $form['tracking']['privacy']['#access'] = FALSE;
     $form['googleanalytics_custom_var']['#access'] = FALSE;
+    $form['advanced']['#access'] = FALSE;
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function sitenow_seo_form_xmlsitemap_settings_form_alter(&$form, &$form_state, $form_id) {
+  // Remove unwanted options for non admins at admin/config/search/xmlsitemap/settings.
+  if (!user_access('administer modules')) {
+    $form['xmlsitemap_xsl']['#access'] = FALSE;
+    $form['xmlsitemap_prefetch_aliases']['#access'] = FALSE;
     $form['advanced']['#access'] = FALSE;
   }
 }
