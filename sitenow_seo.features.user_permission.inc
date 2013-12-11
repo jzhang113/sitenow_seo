@@ -25,6 +25,7 @@ function sitenow_seo_user_default_permissions() {
     'name' => 'administer page titles',
     'roles' => array(
       'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
     ),
     'module' => 'page_title',
   );
