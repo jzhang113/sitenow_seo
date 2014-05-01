@@ -1,11 +1,11 @@
 <?php
 /**
  * @file
- * Install tasks for sitenow_core module.
+ * Install tasks for sitenow_seo module.
  */
 
 /**
- * Enable ctools custom content panes module.
+ * Enable site verification module.
  */
 function sitenow_seo_update_7100(&$sandbox) {
   if (module_exists('sitenow_seo')) {
