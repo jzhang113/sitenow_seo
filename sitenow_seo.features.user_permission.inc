@@ -30,6 +30,16 @@ function sitenow_seo_user_default_permissions() {
     'module' => 'page_title',
   );
 
+  // Exported permission: 'administer site verify'.
+  $permissions['administer site verify'] = array(
+    'name' => 'administer site verify',
+    'roles' => array(
+      'administrator' => 'administrator',
+      'webmaster' => 'webmaster',
+    ),
+    'module' => 'site_verify',
+  );
+
   // Exported permission: 'administer xmlsitemap'.
   $permissions['administer xmlsitemap'] = array(
     'name' => 'administer xmlsitemap',
