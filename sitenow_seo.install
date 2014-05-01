@@ -1,0 +1,14 @@
+<?php
+/**
+ * @file
+ * Install tasks for sitenow_core module.
+ */
+
+/**
+ * Enable ctools custom content panes module.
+ */
+function sitenow_seo_update_7100(&$sandbox) {
+  if (module_exists('sitenow_seo')) {
+    module_enable(array('site_verify'));
+  }
+}
