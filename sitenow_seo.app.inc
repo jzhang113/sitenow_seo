@@ -37,7 +37,7 @@ function sitenow_seo_apps_app_configure_form($form, &$form_state) {
 
   // Configuration Link to XML Sitemap
   $form['sitenow_seo_config_group']['sitenow_xml_sitemaps'] = array(
-    '#markup' => '<li><a href="' . $base_url . '/admin/config/search/xmlsitemap">Configure XML Sitemaps</a></li></ul></div>',
+    '#markup' => '<li><a href="' . $base_url . '/admin/config/search/xmlsitemap">Configure XML Sitemaps</a></li>',
   );
 
   // Configuration Link to Verifications
