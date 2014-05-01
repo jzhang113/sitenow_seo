@@ -5,6 +5,35 @@
  */
 
 /**
+  * Implements hook_enable().
+  */
+function sitenow_seo_enable() {
+  // Revert the sitenow_seo feature.
+  $feature = features_get_features('sitenow_seo');
+  $components = array_keys($feature->info['features']);
+  features_revert(array('sitenow_seo' => $components));
+}
+
+/**
+ * Implements hook_disable().
+ */
+function sitenow_seo_disable() {
+  // Disable some of the dependencies as well.
+  $modules = array(
+    'googleanalytics',
+    'page_title',
+    'site_verify',
+    'xmlsitemap_engines',
+    'xmlsitemap_menu',
+    'xmlsitemap_node',
+    'xmlsitemap'
+  );
+
+  module_disable($modules, $disable_dependents = FALSE);
+
+}
+
+/**
  * Enable site verification module.
  */
 function sitenow_seo_update_7100(&$sandbox) {
