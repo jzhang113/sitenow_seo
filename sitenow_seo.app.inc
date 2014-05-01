@@ -40,5 +40,10 @@ function sitenow_seo_apps_app_configure_form($form, &$form_state) {
     '#markup' => '<li><a href="' . $base_url . '/admin/config/search/xmlsitemap">Configure XML Sitemaps</a></li></ul></div>',
   );
 
+  // Configuration Link to Verifications
+  $form['sitenow_seo_config_group']['sitenow_site_verify'] = array(
+    '#markup' => '<li><a href="' . $base_url . '/admin/config/search/verifications">Configure Site Verifications</a></li></ul></div>',
+  );
+
   return $form;
 }
